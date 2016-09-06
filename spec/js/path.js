@@ -1,6 +1,7 @@
-module.exports = function (casper) {
-    casper.evaluate(function () {
+module.exports = function (browserEngine, ready) {
+    browserEngine.evaluate(function () {
         document.body.innerHTML = '&nbsp;';
         document.body.style['background-color'] = 'green';
     });
+    ready();
 }
